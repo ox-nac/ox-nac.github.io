@@ -76,18 +76,22 @@ nav ul li a:hover {
 }
 
 .profile-bubble {
-    background-color: #FFF7F3; /* 吹き出しの背景色 */
+    background-color: #FFF7F3;
     color: #333;
     padding: 20px;
     width: 80%;
     max-width: 600px;
     border-radius: 15px;
-    border: 2px solid #FFA500; /* オレンジ色の枠線 */
+    border: 2px solid #FFA500;
     position: relative;
-    font-family: 'Roboto Slab', serif; /* フォントをRoboto Slabに */
+    font-family: 'Roboto Slab', serif;
     font-size: 1.2rem;
-    line-height: 1.6;
+    line-height: 1.6; /* 全体の行間を設定 */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-bubble p {
+    margin: 0 0 10px; /* 段落間の余白を縮小 */
 }
 
 /* 吹き出しの三角形部分 */
