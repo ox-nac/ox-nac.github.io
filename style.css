@@ -3,14 +3,14 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto Slab', serif; /* 基本フォントをRoboto Slabに設定 */
-    background-color: #FFF7F3; /* 薄いオレンジの背景色 */
+    background-color: #F5F5F5; /* 背景色 */
     color: #333;
     line-height: 1.6;
 }
 
 /* ヘッダー */
 header {
-    background-color: #FFA500; /* ヘッダー背景を濃いオレンジに */
+    background-color: #F5F5F5; /* ヘッダー背景 */
     color: white;
     text-align: center;
     padding: 20px 0;
