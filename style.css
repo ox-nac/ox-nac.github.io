@@ -1,15 +1,16 @@
-/* 全体のリセット */
+/* 全体のスタイル（リセット） */
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #FFF7F3;
+    font-family: 'Roboto Slab', serif; /* 基本フォントをRoboto Slabに設定 */
+    background-color: #FFF7F3; /* 薄いオレンジの背景色 */
     color: #333;
+    line-height: 1.6;
 }
 
 /* ヘッダー */
 header {
-    background-color: #333;
+    background-color: #FFA500; /* ヘッダー背景を濃いオレンジに */
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -20,10 +21,6 @@ header h1 {
     margin: 0;
 }
 
-header p {
-    font-size: 1rem;
-}
-
 /* ナビゲーション */
 nav ul {
     list-style: none;
@@ -31,7 +28,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    background-color: #444;
+    background-color: #F8D7C4; /* 柔らかいオレンジ色 */
 }
 
 nav ul li {
@@ -41,36 +38,77 @@ nav ul li {
 nav ul li a {
     display: block;
     padding: 15px 20px;
-    color: white;
+    color: #333;
     text-decoration: none;
+    font-family: 'Roboto Slab', serif; /* フォントを統一 */
     transition: background-color 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #555;
+    background-color: #FFCCB6; /* ホバー時の色を変更 */
 }
 
-/* メインコンテンツ */
-main {
-    padding: 20px;
-    text-align: center;
-}
-
-main h2 {
+/* プロフィールセクションのスタイル */
+.profile-title {
+    font-family: 'Roboto Slab', serif; /* Roboto Slabフォント適用 */
     font-size: 2rem;
-    color: #444;
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
 }
 
-main p {
+/* オレンジ色の太い線 */
+.profile-line {
+    width: 80%;
+    height: 5px;
+    background-color: #FFA500; /* オレンジ色 */
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+/* 吹き出しデザイン */
+.profile-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.profile-bubble {
+    background-color: #FFF7F3; /* 吹き出しの背景色 */
+    color: #333;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 15px;
+    border: 2px solid #FFA500; /* オレンジ色の枠線 */
+    position: relative;
+    font-family: 'Roboto Slab', serif; /* フォントをRoboto Slabに */
     font-size: 1.2rem;
     line-height: 1.6;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 吹き出しの三角形部分 */
+.profile-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 15px 0 15px;
+    border-color: #FFA500 transparent transparent transparent; /* 三角形の色をオレンジに */
 }
 
 /* フッター */
 footer {
-    background-color: #333;
-    color: #ccc;
+    background-color: #FFA500; /* フッター背景をオレンジに */
+    color: white;
     text-align: center;
     padding: 10px 0;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
