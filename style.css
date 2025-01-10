@@ -67,7 +67,7 @@ nav ul li a {
 .social-icons {
   display: flex;
   gap: 15px; /* アイコンの間隔をやや狭める */
-  margin-top: 12px; /* 数値を大きくすると下に移動します */
+  margin-top: 10px; /* 数値を大きくすると下に移動します */
 }
 .social-icons img {
   width: 30px;
