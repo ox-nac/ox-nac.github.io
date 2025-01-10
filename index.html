@@ -1,88 +1,85 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>涼一録</title>
   <!-- Google FontsのRoboto Slabを読み込み -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
-  <!-- CSSファイルの読み込み -->
-  <link rel="stylesheet" href="style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <!-- 外部CSSファイルを読み込み -->
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body id="home">
   <!-- ヘッダー -->
   <header>
     <h1>涼一録</h1>
     <p>作品、記事、最新情報の紹介</p>
   </header>
 
-  <!-- ナビゲーション -->
+  <!-- ナビゲーション（ページ内リンク） -->
   <nav>
     <ul>
-      <li><a href="index.html">ホーム</a></li>
-      <li><a href="profile.html">プロフィール</a></li>
-      <li><a href="works.html">作品</a></li>
-      <li><a href="diary.html">日記</a></li>
+      <!-- 同じページのid属性までジャンプ -->
+      <li><a href="#home">ホーム</a></li>
+      <li><a href="#profile">プロフィール</a></li>
+      <li><a href="#works">作品</a></li>
+      <li><a href="#diary">日記</a></li>
     </ul>
   </nav>
 
-  <!-- メインコンテンツ -->
   <main>
     <!-- プロフィールセクション -->
-    <h2 id="profile" class="profile-title">プロフィール</h2>
-    <div class="profile-section">
-      <div class="profile-line"></div>
-      <div class="profile-bubble">
-        <p>栃木県宇都宮市出身。金沢市在住。</p>
-      </div>
-    </div>
-
-    <!-- アニメーションセクション -->
-    <section class="ant-section">
-      <h2>アリの足踏みアニメーション</h2>
-      <!-- アニメーションを適用するアリ要素 -->
-      <div class="ant-walk-container">
-        <div class="ant">
-          <div class="head"></div>
-          <div class="body"></div>
-          <div class="legs leg1"></div>
-          <div class="legs leg2"></div>
-          <div class="legs leg3"></div>
-          <div class="legs leg4"></div>
+    <section id="profile">
+      <h2 id="profile-title">プロフィール</h2>
+      <span class="profile-underline"></span>
+      <div class="profile-section">
+        <!-- アイコンとテキストを横並びに -->
+        <div class="profile-icon-wrapper">
+          <!-- お好きな画像をprofile.jpgなどに変更可能 -->
+          <img src="https://via.placeholder.com/80" alt="プロフィール写真" class="profile-icon" />
+          <p>
+            ここに自己紹介文を入れてください。<br/>
+            文章を短くまとめるなら一行に。<br/>
+            もう少し詳しく書きたいなら、数行にわたってもOKです。
+          </p>
         </div>
       </div>
-      <p>このアリがその場で足踏みをしています。</p>
-      <!-- アニメ再生・停止を切り替えるボタン -->
-      <button id="toggle-btn">アニメ停止</button>
+    </section>
+
+    <!-- 作品セクション -->
+    <section id="works">
+      <h2>作品</h2>
+      <p>ここに作品リストや紹介文を書いてください。</p>
+      <ul>
+        <li>作品タイトル1</li>
+        <li>作品タイトル2</li>
+        <li>作品タイトル3</li>
+      </ul>
     </section>
 
     <!-- 最新情報セクション -->
-    <section>
+    <section id="news">
       <h2>最新情報</h2>
-      <p>新作小説「星空の記憶」発売中！ぜひご覧ください。</p>
+      <p>ここに新刊やお知らせなどの最新情報を書いてください。</p>
+      <ul>
+        <li>新しい出版物の告知</li>
+        <li>イベント情報</li>
+      </ul>
+    </section>
+
+    <!-- 日記セクション -->
+    <section id="diary">
+      <h2>日記</h2>
+      <p>日記やブログ的に日々の出来事を綴るなら、このあたりに書いてください。</p>
     </section>
   </main>
 
   <!-- フッター -->
   <footer>
-    <p>&copy; 2024 涼一 | 最新更新日：月 日</p>
+    <p>&copy; 2024 涼一 | 最新更新日：1月1日</p>
   </footer>
-
-  <!-- JavaScriptファイルを読み込み -->
-  <script>
-    // ボタンでアニメーションを再生・停止
-    const toggleButton = document.getElementById('toggle-btn');
-    const antLegs = document.querySelectorAll('.legs');
-
-    let isPaused = false;
-
-    toggleButton.addEventListener('click', () => {
-      isPaused = !isPaused;
-      antLegs.forEach(leg => {
-        leg.style.animationPlayState = isPaused ? 'paused' : 'running';
-      });
-      toggleButton.textContent = isPaused ? 'アニメ再生' : 'アニメ停止';
-    });
-  </script>
 </body>
 </html>
