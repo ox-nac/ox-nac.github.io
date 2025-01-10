@@ -120,6 +120,12 @@ main {
   border: none; /* オレンジ枠を削除 */
 }
 
+.profile-name {
+  margin-top: 8px; /* アイコンと名前の間隔 */
+  font-size: 1rem; /* 名前のフォントサイズ */
+  font-weight: bold; /* 名前を太字に */
+  color: #333; /* 名前の文字色 */
+}
 
 .profile-section {
   font-size: 0.9rem; /* プロフィール文章を小さめ */
