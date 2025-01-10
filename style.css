@@ -4,14 +4,9 @@ body {
   margin: 0;
   padding: 0;
   background: #FFF7F3; /* 薄いオレンジ色 */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  font-family: 'Roboto Slab', serif;
-  color: #333;
-  line-height: 1.6;
+  font-family: 'Roboto Slab', serif; /* Google Fontsを適用 */
+  color: #333;       /* 文字色は濃いグレー */
+  line-height: 1.6;  /* 行間を少し広めに */
 }
 
 /* テスト用にボタンを少し見やすく */
@@ -34,7 +29,6 @@ button {
   
   /* スプライト画像を読み込む → 幅48px×高さ8px分移動すれば2コマ目？ */
   /* もし画像が 24×8 なら(4倍表示) → 96×32になる */
-  /* ここは実際の画像サイズと調整してください */
   background: url("ant-sprite.png") no-repeat left top;
   
   /* 2コマ → steps(2)、0.5秒ごとにカチカチ切り替え */
@@ -45,94 +39,79 @@ button {
 /* スプライトアニメ: 2フレームを横に並べた場合 */
 @keyframes walkAnim {
   0%   { background-position-x: 0; }
-  /* ここで -48px (幅48px×1) を移動すれば2コマ目へ */
   100% { background-position-x: -48px; }
 }
 
-
 /* ヘッダー */
 header {
-    background-color: #F5F5F5; /* ヘッダー背景 */
-    color: white;
-    text-align: center;
-    padding: 20px 0;
+  background-color: #F5F5F5; /* 薄いグレー */
+  color: #333;              /* 文字色を濃いグレーに変更 */
+  text-align: center;
+  padding: 20px 0;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    margin: 0;
+  font-size: 2.5rem;
+  margin: 0;
 }
 
 /* ナビゲーション */
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    background-color: #F5F5F5; /* 色 */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #F5F5F5;
 }
 
 nav ul li {
-    margin: 0;
+  margin: 0;
 }
 
 nav ul li a {
-    display: block;
-    padding: 15px 20px;
-    color: #333;
-    text-decoration: none;
-    font-family: 'Roboto Slab', serif; /* フォントを統一 */
-    transition: background-color 0.3s;
+  display: block;
+  padding: 15px 20px;
+  color: #333;
+  text-decoration: none;
+  font-family: 'Roboto Slab', serif;
+  transition: background-color 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #FFCCB6; /* ホバー時の色を変更 */
+  background-color: #FFCCB6; /* ホバー時の色 */
 }
 
-/* プロフィールセクションのスタイル */
+/* メインコンテンツ */
+main {
+  /* 横幅を制限して中央寄せ */
+  max-width: 800px;
+  width: 100%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* プロフィールセクション */
 .profile-title {
-    font-family: 'Roboto Slab', serif; /* Roboto Slabフォント適用 */
-    font-size: 2rem;
-    text-align: center;
-    color: #333;
-    margin-bottom: 10px;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
 }
 
-/* オレンジ色の太い線 */
 .profile-line {
-    width: 80%;
-    height: 5px;
-    background-color: #FFA500; /* オレンジ色 */
-    margin: 10px auto;
-    border-radius: 2px;
-
+  width: 80%;
+  height: 5px;
+  background-color: #FFA500; /* オレンジ色 */
+  margin: 10px auto;
+  border-radius: 2px;
 }
 
 .profile-bubble {
-    background-color: #FFF7F3;
-    color: #333;
-    padding: 20px;
-    width: 80%;
-    max-width: 600px;
-    border-radius: 15px;
-    border: 2px solid #FFA500;
-    position: relative;
-    font-family: 'Roboto Slab', serif;
-    font-size: 1.2rem;
-    line-height: 1.6; /* 全体の行間を設定 */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.profile-bubble p {
-    margin: 0 0 10px; /* 段落間の余白を縮小 */
-}
-
-/* フッター */
-footer {
-    background-color: #FFA500; /* フッター背景をオレンジに */
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 0.9rem;
-}
+  background-color: #FFF7F3;
+  color: #333;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 15px;
+  border: 2px solid #FFA500;
+  position: rel
