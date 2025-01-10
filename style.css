@@ -67,9 +67,7 @@ nav ul li a {
 
 .social-icons {
   display: flex;
-  gap: 8px;
-  margin-top: 0px; /* 必要に応じて上方向に詰める */
-
+  gap: 10px;
 }
 
 .social-icons img {
@@ -84,13 +82,13 @@ nav ul li a {
   display: flex;
   align-items: flex-start;
   gap: 20px; /* アイコンと説明文の間隔 */
+  margin-bottom: 40px; /* 次のセクションとの隙間 */
 }
 
-/* プロフィールアイコンと名前 */
 .profile-icon-wrapper {
   display: flex;
-  flex-direction: column; /* アイコンと名前を縦に並べる */
-  align-items: flex-start; /* 左揃え */
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .profile-icon {
@@ -107,8 +105,23 @@ nav ul li a {
   color: #333;
 }
 
-/* プロフィール文 */
 .profile-description {
   font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* 他のセクション（作品、最新情報、日記） */
+.section-left {
+  margin-bottom: 40px; /* 各セクションの間に隙間を追加 */
+}
+
+.section-left h2 {
+  font-size: 2rem; /* プロフィールと同じフォントサイズ */
+  margin-bottom: 10px;
+}
+
+.section-left p,
+.section-left ul {
+  font-size: 1rem; /* プロフィール文と同じフォントサイズ */
   line-height: 1.6;
 }
