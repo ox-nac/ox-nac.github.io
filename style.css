@@ -65,12 +65,12 @@ nav ul li a {
 /* SNSアイコン */
 .social-icons {
   display: flex;
-  gap: 5px; /* アイコンの間隔をやや狭める */
+  gap: 15px; /* アイコンの間隔をやや狭める */
   margin-top: 20px; /* 数値を大きくすると下に移動します */
 }
 .social-icons img {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   object-fit: cover;
   border-radius: 3px;
 }
