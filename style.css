@@ -138,31 +138,39 @@ main {
 
 /* プロフィールセクション */
 .profile-title {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.profile-line {
-  width: 80%;
-  height: 5px;
-  background-color: #FFA500; /* オレンジ色 */
-  margin: 10px auto;
-  border-radius: 2px;
-}
-
-.profile-bubble {
-  background-color: #FFF7F3;
-  color: #333;
-  padding: 20px;
-  width: 80%;
-  max-width: 600px;
-  border-radius: 15px;
-  border: 2px solid #FFA500;
+  font-size: 2rem; /* タイトル文字のサイズ */
+  color: #333; /* 文字色 */
+  margin-bottom: 5px; /* 下線との間隔を小さく調整 */
+  text-align: center; /* 中央揃え */
   position: relative;
-  font-size: 1.2rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+/* タイトル下の下線（プロファイルライン） */
+.profile-line {
+  width: 50%; /* 下線の幅を調整 */
+  height: 3px; /* 下線の太さ */
+  background-color: #FFA500; /* オレンジ色 */
+  margin: 0 auto; /* 中央揃え */
+  border-radius: 2px; /* 丸みを少し付ける */
+  transform: translateY(-5px); /* 「プロフィール」の文字に近づける */
+}
+
+/* バブルデザインのプロフィール内容 */
+.profile-bubble {
+  background-color: #FFF7F3; /* 背景色を薄いオレンジに統一 */
+  color: #333; /* 文字色を濃いグレー */
+  padding: 20px; /* 内側の余白 */
+  width: 80%; /* 幅を全体の80%に設定 */
+  max-width: 600px; /* 最大幅 */
+  border-radius: 15px; /* 丸みを付ける */
+  position: relative;
+  font-size: 1.2rem; /* 文字サイズ */
+  line-height: 1.6; /* 行間 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 軽い影を付ける */
+  margin: 20px auto; /* 上下中央揃え */
+  border: none; /* 枠を削除 */
+}
+
 
 /* フッター */
 footer {
