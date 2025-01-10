@@ -109,24 +109,24 @@ main {
 
 /* プロフィール本文 */
 .profile-icon-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+  display: inline-block; /* コンテンツをインラインで保持 */
+  text-align: center;    /* 名前とアイコンを中央揃え */
 }
+
 .profile-icon {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  flex-shrink: 0;
-  border: none; /* オレンジ枠を削除 */
+  width: 80px;           /* アイコンの幅 */
+  height: 80px;          /* アイコンの高さ */
+  border-radius: 50%;    /* 丸くする */
+  object-fit: cover;     /* 画像を切り抜かずに表示 */
+  display: block;        /* アイコンを独立した行に配置 */
+  margin: 0 auto;        /* 中央揃え */
 }
 
 .profile-name {
-  margin-top: 8px; /* アイコンと名前の間隔 */
-  font-size: 1rem; /* 名前のフォントサイズ */
-  font-weight: bold; /* 名前を太字に */
-  color: #333; /* 名前の文字色 */
+  margin-top: 8px;       /* アイコンと名前の間隔 */
+  font-size: 1rem;       /* 名前のフォントサイズ */
+  font-weight: bold;     /* 名前を太字に */
+  color: #333;           /* 名前の文字色 */
 }
 
 .profile-section {
