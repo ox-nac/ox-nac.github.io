@@ -107,26 +107,39 @@ main {
   /* 追加でボーダーや背景色をつけたければここに */
 }
 
-/* プロフィール本文 */
+/* プロフィールセクション全体 */
+.profile-section {
+  display: flex; /* 横並びにする */
+  align-items: center; /* 縦方向を揃える */
+  gap: 20px; /* アイコンとテキストの間隔 */
+}
+
+/* プロフィールアイコンと名前 */
 .profile-icon-wrapper {
-  display: inline-block; /* コンテンツをインラインで保持 */
-  text-align: center;    /* 名前とアイコンを中央揃え */
+  display: flex;
+  flex-direction: column; /* 縦に並べる */
+  align-items: flex-start; /* 左寄せ */
 }
 
 .profile-icon {
-  width: 80px;           /* アイコンの幅 */
-  height: 80px;          /* アイコンの高さ */
-  border-radius: 50%;    /* 丸くする */
-  object-fit: cover;     /* 画像を切り抜かずに表示 */
-  display: block;        /* アイコンを独立した行に配置 */
-  margin: 0 auto;        /* 中央揃え */
+  width: 80px; /* アイコンの幅 */
+  height: 80px; /* アイコンの高さ */
+  border-radius: 50%; /* 丸くする */
+  object-fit: cover;
+  margin-bottom: 5px; /* アイコンと名前の間隔 */
 }
 
 .profile-name {
-  margin-top: 8px;       /* アイコンと名前の間隔 */
-  font-size: 1rem;       /* 名前のフォントサイズ */
-  font-weight: bold;     /* 名前を太字に */
-  color: #333;           /* 名前の文字色 */
+  font-size: 1rem; /* 名前のフォントサイズ */
+  font-weight: bold; /* 太字にする */
+  color: #333; /* 名前の文字色 */
+}
+
+/* プロフィール文 */
+.profile-description {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
 }
 
 .profile-section {
