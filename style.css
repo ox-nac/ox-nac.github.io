@@ -42,7 +42,6 @@ nav ul {
 }
 nav ul li {
   position: relative;
-  /* 区切りの縦線を右端に（最後のメニューは表示しない） */
 }
 nav ul li:not(:last-child) {
   border-right: 1px solid #ccc; /* 縦線 */
@@ -79,39 +78,11 @@ main {
 }
 
 /* プロフィールセクション ---------------------------------------------------- */
-.profile-title-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* 左揃え */
-  gap: 5px; /* 「プロフィール」とSNSアイコンの間隔 */
-  margin-bottom: 7px; /* タイトルと下の内容との隙間 */
-}
-
-#profile-title {
-  font-size: 2rem; /* 「プロフィール」タイトルの大きさ */
-  margin: 0;
-}
-
-/* SNSアイコン */
-.social-icons {
-  display: flex;
-  gap: 8px; /* アイコン間の間隔 */
-  margin-top: 0px; /* 必要に応じて上方向に詰める */
-}
-
-.social-icons img {
-  width: 20px;
-  height: 20px;
-  object-fit: cover;
-  border-radius: 3px;
-  /* 追加でボーダーや背景色をつけたければここに */
-}
-
-/* プロフィールセクション全体 */
 .profile-section {
   display: flex; /* 横並びにする */
-  align-items: center; /* 縦方向を揃える */
+  align-items: flex-start; /* 縦方向を揃える */
   gap: 20px; /* アイコンとテキストの間隔 */
+  margin-bottom: 40px;
 }
 
 /* プロフィールアイコンと名前 */
@@ -139,11 +110,6 @@ main {
 .profile-description {
   font-size: 1rem;
   color: #333;
-  line-height: 1.6;
-}
-
-.profile-section {
-  font-size: 0.9rem; /* プロフィール文章を小さめ */
   line-height: 1.6;
 }
 
