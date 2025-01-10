@@ -82,9 +82,9 @@ main {
 .profile-title-wrapper {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* タイトルとアイコン群を左右に配置 */
-  gap: 5px; /* 「プロフィール」とSNSアイコンの間隔 */
-  margin-bottom: 10px; /* タイトルと下の内容との隙間 */
+  justify-content: flex-start; /* 左揃え */
+  gap: 2px; /* 「プロフィール」とSNSアイコンの間隔 */
+  margin-bottom: 7px; /* タイトルと下の内容との隙間 */
 }
 
 #profile-title {
@@ -95,8 +95,10 @@ main {
 /* SNSアイコン */
 .social-icons {
   display: flex;
-  gap: 10px;
+  gap: 8px; /* アイコン間の間隔 */
+  margin-top: 0px; /* 必要に応じて上方向に詰める */
 }
+
 .social-icons img {
   width: 20px;
   height: 20px;
