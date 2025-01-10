@@ -83,7 +83,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: flex-start; /* 左揃え */
-  gap: 2px; /* 「プロフィール」とSNSアイコンの間隔 */
+  gap: 5px; /* 「プロフィール」とSNSアイコンの間隔 */
   margin-bottom: 7px; /* タイトルと下の内容との隙間 */
 }
 
