@@ -6,6 +6,12 @@ body {
     background-color: #F5F5F5; /* 背景色 */
     color: #333;
     line-height: 1.6;
+    display: flex;
+  　flex-direction: column;
+  　align-items: center;
+  　justify-content: center;
+  　height: 100vh;
+  　font-family: sans-serif;
 }
 
 /* ヘッダー */
@@ -28,7 +34,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    background-color: #F8D7C4; /* 柔らかいオレンジ色 */
+    background-color: #F5F5F5; /* 色 */
 }
 
 nav ul li {
@@ -86,18 +92,45 @@ nav ul li a:hover {
     margin: 0 0 10px; /* 段落間の余白を縮小 */
 }
 
-/* 吹き出しの三角形部分 */
-.profile-bubble::after {
-    content: '';
-    position: absolute;
-    bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 20px 15px 0 15px;
-    border-color: #FFA500 transparent transparent transparent; /* 三角形の色をオレンジに */
+/* ボタンの簡単なスタイル */
+button {
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  margin-top: 1em;
+  cursor: pointer;
+}
+
+/* ドット絵がにじまないようにする（重要） */
+.ant-walk {
+  image-rendering: pixelated;    /* ピクセルのカクカクを保つ */
+  image-rendering: crisp-edges;  /* ブラウザによってはこちらでもOK */
+
+  /* 1コマ分の幅と高さを指定：12×8ピクセルを想定 */
+  width: 12px;
+  height: 8px;
+
+  /* スプライトシートを背景に設定（幅24×高さ8ピクセルの想定） */
+  background: url("ant-sprite.png") no-repeat left top;
+
+  /*
+    アニメーション:
+      - 0.5秒 (duration)
+      - steps(2): 2コマのコマ送り
+      - infinite: ずっとループ
+  */
+  animation: walkAnim 0.5s steps(2) infinite;
+  animation-play-state: running; /* デフォルトは「再生中」 */
+}
+
+/*
+  スプライトアニメーションの定義
+  0%   : background-position-x:  0
+  100% : background-position-x: -24px (2コマ目)
+*/
+@keyframes walkAnim {
+  0%   { background-position-x: 0; }
+  100% { background-position-x: -24px; }
+
 }
 
 /* フッター */
