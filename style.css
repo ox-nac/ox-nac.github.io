@@ -133,8 +133,8 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #F5F5F5;
-  color: #fff;
+  background-color: #333; /* 背景色を濃いグレーに変更 */
+  color: #fff;           /* 文字色は白 */
   text-align: center;
   padding: 10px 0;
   font-size: 0.9rem;
