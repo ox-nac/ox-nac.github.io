@@ -1,17 +1,54 @@
 /* 全体のスタイル（リセット） */
+/* 背景やレイアウト */
 body {
   margin: 0;
   padding: 0;
-  background-color: #FFF7F3;     /* ご要望の薄オレンジ色 */
-  color: #333;
-  font-family: 'Roboto Slab', serif;  /* Roboto Slabを適用（要Google Fonts読み込み） */
-  line-height: 1.6;            /* ゆったりとした行間 */
+  background: #FFF7F3; /* 薄いオレンジ色 */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;           /* ビューポートの高さ全体を確保 */
+  height: 100vh;
+  font-family: 'Roboto Slab', serif;
+  color: #333;
+  line-height: 1.6;
 }
+
+/* テスト用にボタンを少し見やすく */
+button {
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  margin-top: 1em;
+  cursor: pointer;
+}
+
+/* ドット絵がにじまない設定 */
+.ant-walk {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  
+  /* テスト用に分かりやすく大きくする */
+  width: 48px;    /* 本来の4倍拡大 */
+  height: 32px;   /* 本来の4倍拡大 */
+  border: 1px solid red; /* 要素の枠を付ける */
+  
+  /* スプライト画像を読み込む → 幅48px×高さ8px分移動すれば2コマ目？ */
+  /* もし画像が 24×8 なら(4倍表示) → 96×32になる */
+  /* ここは実際の画像サイズと調整してください */
+  background: url("ant-sprite.png") no-repeat left top;
+  
+  /* 2コマ → steps(2)、0.5秒ごとにカチカチ切り替え */
+  animation: walkAnim 0.5s steps(2) infinite;
+  animation-play-state: running; /* 再生中 */
+}
+
+/* スプライトアニメ: 2フレームを横に並べた場合 */
+@keyframes walkAnim {
+  0%   { background-position-x: 0; }
+  /* ここで -48px (幅48px×1) を移動すれば2コマ目へ */
+  100% { background-position-x: -48px; }
+}
+
 
 /* ヘッダー */
 header {
@@ -89,47 +126,6 @@ nav ul li a:hover {
 
 .profile-bubble p {
     margin: 0 0 10px; /* 段落間の余白を縮小 */
-}
-
-/* ボタンの簡単なスタイル */
-button {
-  font-size: 1rem;
-  padding: 0.5em 1em;
-  margin-top: 1em;
-  cursor: pointer;
-}
-
-/* ドット絵がにじまないようにする（重要） */
-.ant-walk {
-  image-rendering: pixelated;    /* ピクセルのカクカクを保つ */
-  image-rendering: crisp-edges;  /* ブラウザによってはこちらでもOK */
-
-  /* 1コマ分の幅と高さを指定：12×8ピクセルを想定 */
-  width: 12px;
-  height: 8px;
-
-  /* スプライトシートを背景に設定（幅24×高さ8ピクセルの想定） */
-  background: url("ant-sprite.png") no-repeat left top;
-
-  /*
-    アニメーション:
-      - 0.5秒 (duration)
-      - steps(2): 2コマのコマ送り
-      - infinite: ずっとループ
-  */
-  animation: walkAnim 0.5s steps(2) infinite;
-  animation-play-state: running; /* デフォルトは「再生中」 */
-}
-
-/*
-  スプライトアニメーションの定義
-  0%   : background-position-x:  0
-  100% : background-position-x: -24px (2コマ目)
-*/
-@keyframes walkAnim {
-  0%   { background-position-x: 0; }
-  100% { background-position-x: -24px; }
-
 }
 
 /* フッター */
