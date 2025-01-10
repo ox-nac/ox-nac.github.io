@@ -10,7 +10,8 @@ body {
   background-color: #FFF7F3; /* 薄いオレンジ色 */
   color: #333;
   line-height: 1.6;
-  margin-bottom: 60px; /* フッター用余白 */
+  /* フッター固定用余白（フッターの高さと同程度） */
+  margin-bottom: 60px;
 }
 
 /* ヘッダー */
@@ -19,12 +20,10 @@ header {
   background-color: #F5F5F5;
   padding: 20px 0 10px;
 }
-
 header h1 {
   font-size: 2.4rem;
   margin-bottom: 5px;
 }
-
 header p {
   font-size: 1rem;
   color: #666;
@@ -38,11 +37,9 @@ nav ul {
   justify-content: center;
   background-color: #F5F5F5;
 }
-
 nav ul li:not(:last-child) {
   border-right: 1px solid #ccc;
 }
-
 nav ul li a {
   display: block;
   text-decoration: none;
@@ -51,25 +48,25 @@ nav ul li a {
   padding: 8px 12px;
 }
 
-/* プロフィールセクション ---------------------------------------------------- */
+/* 「プロフィール」タイトルとSNSアイコン */
 .profile-title-wrapper {
   display: flex;
-  justify-content: space-between; /* 左にタイトル、右にSNSアイコン */
   align-items: center;
+  gap: 8px; /* 「プロフィール」とSNSアイコンの距離を詰める */
   margin-bottom: 20px;
 }
 
+/* 「プロフィール」はデフォルト左寄せだが、PC画面では中央へ */
 #profile-title {
   font-size: 2rem;
-  text-align: left;
   margin: 0;
 }
 
+/* SNSアイコン */
 .social-icons {
   display: flex;
-  gap: 10px;
+  gap: 5px; /* アイコンの間隔をやや狭める */
 }
-
 .social-icons img {
   width: 20px;
   height: 20px;
@@ -81,16 +78,18 @@ nav ul li a {
 .profile-section {
   display: flex;
   align-items: flex-start;
-  gap: 20px; /* アイコンと説明文の間隔 */
-  margin-bottom: 40px; /* 次のセクションとの隙間 */
+  gap: 20px;
+  margin-bottom: 40px;
 }
 
+/* プロフィールアイコン＆名前を縦方向に並べる */
 .profile-icon-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center; /* 名前をアイコンの真下に中央揃え */
 }
 
+/* プロフィールアイコン */
 .profile-icon {
   width: 80px;
   height: 80px;
@@ -99,29 +98,82 @@ nav ul li a {
   margin-bottom: 5px;
 }
 
+/* プロフィール名（アイコンの中央下） */
 .profile-name {
   font-size: 1rem;
   font-weight: bold;
   color: #333;
 }
 
+/* プロフィール文 */
 .profile-description {
   font-size: 1rem;
   line-height: 1.6;
 }
 
-/* 他のセクション（作品、最新情報、日記） */
+/* 各セクション（作品、最新情報、日記など） */
 .section-left {
-  margin-bottom: 40px; /* 各セクションの間に隙間を追加 */
+  margin-bottom: 40px; /* 各セクションの隙間 */
 }
 
+/* セクションのタイトル */
 .section-left h2 {
-  font-size: 2rem; /* プロフィールと同じフォントサイズ */
+  font-size: 2rem;
   margin-bottom: 10px;
 }
 
+/* セクション内のテキストをレスポンシブで調整 */
 .section-left p,
 .section-left ul {
-  font-size: 1rem; /* プロフィール文と同じフォントサイズ */
+  font-size: 1rem;
   line-height: 1.6;
+}
+
+/* ========================
+   レスポンシブ対応
+   スマホ〜タブレット (max-width: 767px) は左寄せ
+   PC (min-width: 768px) は中央揃え
+======================== */
+@media (max-width: 767px) {
+  /* メインセクションは左寄せ + 少しパディングでスペース */
+  .section-left {
+    text-align: left;
+    padding-left: 20px; /* 左に少しスペースを開ける */
+    padding-right: 20px;
+  }
+
+  #profile-title {
+    text-align: left; /* スマホ時は左寄せ */
+  }
+
+  /* プロフィールアイコンも左に少しスペースを開けたい場合はwrapperに余白 */
+  .profile-icon-wrapper {
+    align-items: center; /* 名前はアイコン中央下 */
+  }
+}
+
+@media (min-width: 768px) {
+  /* PCではセクションを中央揃え */
+  .section-left {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px; /* 中央揃えの見栄えを良くするために幅を制限 */
+  }
+
+  #profile-title {
+    text-align: center;
+  }
+}
+
+/* フッター（固定表示） */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333; /* 濃いグレー */
+  color: #fff;           /* 白文字 */
+  text-align: center;
+  padding: 10px 0;
+  font-size: 0.9rem;
 }
