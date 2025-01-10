@@ -30,27 +30,40 @@
     </ul>
   </nav>
 
+  <!-- メインコンテンツ -->
   <main>
     <!-- プロフィールセクション -->
-    <section id="profile">
-      <h2 id="profile-title">プロフィール</h2>
-      <span class="profile-underline"></span>
-      <div class="profile-section">
-        <!-- アイコンとテキストを横並びに -->
-        <div class="profile-icon-wrapper">
-          <!-- お好きな画像をprofile.jpgなどに変更可能 -->
-          <img src="https://via.placeholder.com/80" alt="プロフィール写真" class="profile-icon" />
-          <p>
-            ここに自己紹介文を入れてください。<br/>
-            文章を短くまとめるなら一行に。<br/>
-            もう少し詳しく書きたいなら、数行にわたってもOKです。
-          </p>
+    <section id="profile" class="section-left">
+      <div class="profile-title-wrapper">
+        <h2 id="profile-title">プロフィール</h2>
+        <div class="social-icons">
+          <!-- アイコンを小さめに表示し、リンク先はダミーURLにしています -->
+          <a href="https://twitter.com" target="_blank" title="X(Twitter)">
+            <img src="https://via.placeholder.com/20/000000/FFFFFF?text=X" alt="Xアイコン" />
+          </a>
+          <a href="https://instagram.com" target="_blank" title="Instagram">
+            <img src="https://via.placeholder.com/20/000000/FFFFFF?text=I" alt="Instagramアイコン" />
+          </a>
+          <a href="https://note.com" target="_blank" title="note">
+            <img src="https://via.placeholder.com/20/000000/FFFFFF?text=N" alt="noteアイコン" />
+          </a>
         </div>
+      </div>
+
+      <!-- アイコンとテキストを横並びに -->
+      <div class="profile-icon-wrapper">
+        <!-- お好きな画像をprofile.jpgなどに変更可能 -->
+        <img src="https://via.placeholder.com/80" alt="プロフィール写真" class="profile-icon" />
+        <p>
+          ここに自己紹介文を入れてください。<br/>
+          文章を短くまとめるなら一行に。<br/>
+          もう少し詳しく書きたいなら、数行にわたってもOKです。
+        </p>
       </div>
     </section>
 
     <!-- 作品セクション -->
-    <section id="works">
+    <section id="works" class="section-left">
       <h2>作品</h2>
       <p>ここに作品リストや紹介文を書いてください。</p>
       <ul>
@@ -61,7 +74,7 @@
     </section>
 
     <!-- 最新情報セクション -->
-    <section id="news">
+    <section id="news" class="section-left">
       <h2>最新情報</h2>
       <p>ここに新刊やお知らせなどの最新情報を書いてください。</p>
       <ul>
@@ -71,13 +84,13 @@
     </section>
 
     <!-- 日記セクション -->
-    <section id="diary">
+    <section id="diary" class="section-left">
       <h2>日記</h2>
       <p>日記やブログ的に日々の出来事を綴るなら、このあたりに書いてください。</p>
     </section>
   </main>
 
-  <!-- フッター -->
+  <!-- フッター（固定表示） -->
   <footer>
     <p>&copy; 2024 涼一 | 最新更新日：1月1日</p>
   </footer>
