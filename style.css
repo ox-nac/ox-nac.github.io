@@ -2,13 +2,15 @@
 body {
   margin: 0;
   padding: 0;
-  background: #fafaf0;
+  background-color: #FFF7F3;     /* ご要望の薄オレンジ色 */
+  color: #333;
+  font-family: 'Roboto Slab', serif;  /* Roboto Slabを適用（要Google Fonts読み込み） */
+  line-height: 1.6;            /* ゆったりとした行間 */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  font-family: sans-serif;
+  min-height: 100vh;           /* ビューポートの高さ全体を確保 */
 }
 
 /* ヘッダー */
