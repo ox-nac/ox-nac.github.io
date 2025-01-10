@@ -37,16 +37,26 @@
       </div>
     </div>
 
-    <!-- アニメーションを適用するアリ要素 -->
-    <div class="ant-walk"></div>
-    <p>このアリがその場で足踏みをしています。</p>
+    <!-- アニメーションセクション -->
+    <section class="ant-section">
+      <h2>アリの足踏みアニメーション</h2>
+      <!-- アニメーションを適用するアリ要素 -->
+      <div class="ant-walk-container">
+        <div class="ant">
+          <div class="head"></div>
+          <div class="body"></div>
+          <div class="legs leg1"></div>
+          <div class="legs leg2"></div>
+          <div class="legs leg3"></div>
+          <div class="legs leg4"></div>
+        </div>
+      </div>
+      <p>このアリがその場で足踏みをしています。</p>
+      <!-- アニメ再生・停止を切り替えるボタン -->
+      <button id="toggle-btn">アニメ停止</button>
+    </section>
 
-    <!-- アニメ再生・停止を切り替えるボタン -->
-    <button id="toggle-btn">アニメ停止</button>
-
-    <!-- JavaScriptファイルを読み込み -->
-    <script src="script.js"></script>
-    
+    <!-- 最新情報セクション -->
     <section>
       <h2>最新情報</h2>
       <p>新作小説「星空の記憶」発売中！ぜひご覧ください。</p>
@@ -57,5 +67,22 @@
   <footer>
     <p>&copy; 2024 涼一 | 最新更新日：月 日</p>
   </footer>
+
+  <!-- JavaScriptファイルを読み込み -->
+  <script>
+    // ボタンでアニメーションを再生・停止
+    const toggleButton = document.getElementById('toggle-btn');
+    const antLegs = document.querySelectorAll('.legs');
+
+    let isPaused = false;
+
+    toggleButton.addEventListener('click', () => {
+      isPaused = !isPaused;
+      antLegs.forEach(leg => {
+        leg.style.animationPlayState = isPaused ? 'paused' : 'running';
+      });
+      toggleButton.textContent = isPaused ? 'アニメ再生' : 'アニメ停止';
+    });
+  </script>
 </body>
 </html>
