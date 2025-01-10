@@ -53,6 +53,7 @@ nav ul li a {
   display: flex;
   align-items: center;
   gap: 8px; /* 「プロフィール」とSNSアイコンの距離を詰める */
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
