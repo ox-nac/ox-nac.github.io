@@ -1,17 +1,14 @@
 /* 全体のスタイル（リセット） */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto Slab', serif; /* 基本フォントをRoboto Slabに設定 */
-    background-color: #F5F5F5; /* 背景色 */
-    color: #333;
-    line-height: 1.6;
-    display: flex;
-  　flex-direction: column;
-  　align-items: center;
-  　justify-content: center;
-  　height: 100vh;
-  　font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fafaf0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: sans-serif;
 }
 
 /* ヘッダー */
