@@ -57,8 +57,11 @@ nav ul li a {
   margin-bottom: 20px;
 }
 
+
+
 /* 「プロフィール」はデフォルト左寄せだが、PC画面では中央へ */
 #profile-title {
+  text-align: left;              /* プロフィールタイトルはそのまま左揃え */
   font-size: 2rem;
   margin: 0;
 }
@@ -68,6 +71,7 @@ nav ul li a {
   display: flex;
   gap: 15px; /* アイコンの間隔をやや狭める */
   margin-top: 9px; /* 数値を大きくすると下に移動します */
+  margin-left: auto;            /* アイコンを右寄せする */
 }
 .social-icons img {
   width: 30px;
