@@ -14,32 +14,77 @@ button {
   font-size: 1rem;
   padding: 0.5em 1em;
   margin-top: 1em;
+  background-color: #FFA500; /* オレンジ色 */
+  color: white;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #FFCCB6; /* ホバー時の色を変更 */
 }
 
 /* ドット絵がにじまない設定 */
-.ant-walk {
-  image-rendering: pixelated;
-  image-rendering: crisp-edges;
-  
-  /* テスト用に分かりやすく大きくする */
-  width: 48px;    /* 本来の4倍拡大 */
-  height: 32px;   /* 本来の4倍拡大 */
-  border: 1px solid red; /* 要素の枠を付ける */
-  
-  /* スプライト画像を読み込む → 幅48px×高さ8px分移動すれば2コマ目？ */
-  /* もし画像が 24×8 なら(4倍表示) → 96×32になる */
-  background: url("ant-sprite.png") no-repeat left top;
-  
-  /* 2コマ → steps(2)、0.5秒ごとにカチカチ切り替え */
-  animation: walkAnim 0.5s steps(2) infinite;
-  animation-play-state: running; /* 再生中 */
+.ant-walk-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red; /* 赤枠 */
 }
 
-/* スプライトアニメ: 2フレームを横に並べた場合 */
-@keyframes walkAnim {
-  0%   { background-position-x: 0; }
-  100% { background-position-x: -48px; }
+.ant {
+  position: relative;
+  width: 80px;
+  height: 40px;
+}
+
+/* 頭 */
+.head {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+/* 胴体 */
+.body {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  width: 60px;
+  height: 20px;
+  background-color: black;
+  border-radius: 10px;
+}
+
+/* 足 */
+.legs {
+  position: absolute;
+  width: 40px;
+  height: 5px;
+  background-color: black;
+  border-radius: 2px;
+  animation: legMove 0.5s infinite alternate ease-in-out;
+}
+
+/* 各足の配置 */
+.leg1 { top: 25px; left: 10px; transform-origin: left center; }
+.leg2 { top: 25px; left: 30px; transform-origin: left center; }
+.leg3 { top: 25px; left: 50px; transform-origin: right center; }
+.leg4 { top: 25px; left: 70px; transform-origin: right center; }
+
+/* 足踏みアニメーション */
+@keyframes legMove {
+  0% { transform: rotate(15deg); }
+  100% { transform: rotate(-15deg); }
 }
 
 /* ヘッダー */
@@ -114,4 +159,16 @@ main {
   max-width: 600px;
   border-radius: 15px;
   border: 2px solid #FFA500;
-  position: rel
+  position: relative;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* フッター */
+footer {
+  background-color: #FFA500; /* フッター背景をオレンジに */
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 0.9rem;
+}
