@@ -116,8 +116,9 @@ main {
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
-  border: 2px solid #FFA500; /* アイコンにオレンジ枠 (不要なら削除可) */
+  border: none; /* オレンジ枠を削除 */
 }
+
 
 .profile-section {
   font-size: 0.9rem; /* プロフィール文章を小さめ */
