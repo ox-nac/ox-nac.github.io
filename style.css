@@ -10,8 +10,7 @@ body {
   background-color: #FFF7F3; /* 薄いオレンジ色 */
   color: #333;
   line-height: 1.6;
-  /* フッター固定のため、下部に余白を確保（フッター高さと同じくらい） */
-  margin-bottom: 60px;
+  margin-bottom: 60px; /* フッター用余白 */
 }
 
 /* ヘッダー */
@@ -20,10 +19,12 @@ header {
   background-color: #F5F5F5;
   padding: 20px 0 10px;
 }
+
 header h1 {
   font-size: 2.4rem;
   margin-bottom: 5px;
 }
+
 header p {
   font-size: 1rem;
   color: #666;
@@ -31,99 +32,81 @@ header p {
 }
 
 /* ナビゲーション */
-nav {
-  margin-bottom: 10px;
-}
 nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
   background-color: #F5F5F5;
 }
-nav ul li {
-  position: relative;
-}
+
 nav ul li:not(:last-child) {
-  border-right: 1px solid #ccc; /* 縦線 */
+  border-right: 1px solid #ccc;
 }
+
 nav ul li a {
   display: block;
   text-decoration: none;
   color: #333;
   font-size: 1rem;
   padding: 8px 12px;
-  transition: background-color 0.3s;
-}
-nav ul li a:hover {
-  background-color: #FFCCB6;
-  border-radius: 4px;
-}
-
-/* メイン全体 */
-main {
-  width: 90%;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px 0;
-}
-
-/* 左寄せしたいセクション */
-.section-left {
-  text-align: left;
-  margin-bottom: 40px;
-}
-.section-left h2 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
 }
 
 /* プロフィールセクション ---------------------------------------------------- */
+.profile-title-wrapper {
+  display: flex;
+  justify-content: space-between; /* 左にタイトル、右にSNSアイコン */
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#profile-title {
+  font-size: 2rem;
+  text-align: left;
+  margin: 0;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+/* プロフィールセクション全体 */
 .profile-section {
-  display: flex; /* 横並びにする */
-  align-items: flex-start; /* 縦方向を揃える */
-  gap: 20px; /* アイコンとテキストの間隔 */
-  margin-bottom: 40px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px; /* アイコンと説明文の間隔 */
 }
 
 /* プロフィールアイコンと名前 */
 .profile-icon-wrapper {
   display: flex;
-  flex-direction: column; /* 縦に並べる */
-  align-items: flex-start; /* 左寄せ */
+  flex-direction: column; /* アイコンと名前を縦に並べる */
+  align-items: flex-start; /* 左揃え */
 }
 
 .profile-icon {
-  width: 80px; /* アイコンの幅 */
-  height: 80px; /* アイコンの高さ */
-  border-radius: 50%; /* 丸くする */
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 5px; /* アイコンと名前の間隔 */
+  margin-bottom: 5px;
 }
 
 .profile-name {
-  font-size: 1rem; /* 名前のフォントサイズ */
-  font-weight: bold; /* 太字にする */
-  color: #333; /* 名前の文字色 */
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
 }
 
 /* プロフィール文 */
 .profile-description {
   font-size: 1rem;
-  color: #333;
   line-height: 1.6;
-}
-
-/* 作品、最新情報、日記のセクション見出しは上記 .section-left h2 で共通 */
-
-/* フッター（固定） */
-footer {
-  position: fixed;      /* 画面下部に固定 */
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #333; /* 背景色を濃いグレーに変更 */
-  color: #fff;           /* 文字色は白 */
-  text-align: center;
-  padding: 10px 0;
-  font-size: 0.9rem;
 }
