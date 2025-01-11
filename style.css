@@ -107,7 +107,8 @@ nav ul li a {
   background-position: center;
   border-radius: 50%;
   object-fit: cover;
-  image-rendering: pixelated; /* ピクセル化して荒く表示 */
+  image-rendering: auto;        /* 通常の高画質表示 */
+  transition: all 0.3s ease-in-out; /* スムーズな切り替え */
   margin-bottom: 5px;
 }
 
@@ -116,6 +117,11 @@ nav ul li a {
   font-size: 1rem;
   font-weight: bold;
   color: #333;
+}
+
+.profile-icon.zoomed {
+  image-rendering: pixelated;   /* ピクセル表示に変更 */
+  transform: scale(2);          /* 画像を2倍に拡大 */
 }
 
 /* プロフィール文 */
