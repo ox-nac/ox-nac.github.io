@@ -97,6 +97,7 @@ nav ul li a {
 
 /* プロフィールアイコン */
 .profile-icon {
+  pointer-events: none; /* クリックやドラッグを無効化 */
   width: 80px;
   height: 80px;
   border-radius: 50%;
