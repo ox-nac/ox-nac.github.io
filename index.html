@@ -118,7 +118,15 @@
 
   <!-- フッター（固定表示） -->
   <footer>
-    <p>&copy; 2024 涼一 | 最新更新日：1月1日</p>
+    <p>&copy; 涼一 | 最新更新日：<span id="last-modified"></span></p>
   </footer>
+
+  <script>
+  // ページの最終更新日時を取得
+  const lastModified = document.lastModified;
+  
+  // フッターに挿入
+  document.getElementById('last-modified').textContent = lastModified;
+</script>
 </body>
 </html>
