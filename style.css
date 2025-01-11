@@ -102,6 +102,9 @@ nav ul li a {
   -webkit-user-drag: none; /* 画像のドラッグ禁止 (Safari向け) */
   width: 80px;
   height: 80px;
+  background-image: url('images/profile.jpg');
+  background-size: cover;
+  background-position: center;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 5px;
