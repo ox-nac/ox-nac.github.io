@@ -107,6 +107,7 @@ nav ul li a {
   background-position: center;
   border-radius: 50%;
   object-fit: cover;
+  image-rendering: pixelated; /* ピクセル化して荒く表示 */
   margin-bottom: 5px;
 }
 
