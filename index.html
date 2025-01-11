@@ -123,10 +123,17 @@
 
   <script>
   // ページの最終更新日時を取得
-  const lastModified = document.lastModified;
+  const lastModified = new Date(document.lastModified);
+
+  // 日付を「YYYY/MM/DD HH:MM」の形式に変換
+  const formattedDate = lastModified.getFullYear() + "/" +
+                        String(lastModified.getMonth() + 1).padStart(2, '0') + "/" +
+                        String(lastModified.getDate()).padStart(2, '0') + " " +
+                        String(lastModified.getHours()).padStart(2, '0') + ":" +
+                        String(lastModified.getMinutes()).padStart(2, '0');
   
   // フッターに挿入
-  document.getElementById('last-modified').textContent = lastModified;
+  document.getElementById('last-modified').textContent = formattedDate;
 </script>
 </body>
 </html>
